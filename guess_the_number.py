@@ -7,7 +7,7 @@ def is_valid_number(s):
 def main():
     num = random.randint(1,100)
     guessed_num = False
-    guess = input("Guess a number from 1 to 100: ")
+    guess = str(input("Guess a number from 1 to 100: "))
     num_guesses = 0
     while not guessed_num:
         if not is_valid_number(guess):
@@ -20,7 +20,7 @@ def main():
         elif guess > num:
             guess = str(input("Too high. Guess again:"))
         else:
-            print("You got it in " + num_guesses + " guesses!")
+            print("You got it in ", num_guesses,  " guesses!")
             guessed_num = True
     print("Thanks for playing.")
 if __name__ == '__main__':
